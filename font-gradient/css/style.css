@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@font-face {
+  font-family: 'Pacifico';
+  src: url(https://fonts.gstatic.com/s/pacifico/v7/Q_Z9mv4hySLTMoMjnk_rCfesZW2xOQ-xsNqO47m55DA.woff2) ;
+ }
+@font-face {
+  font-family: 'Parisienne';
+  src: url(https://fonts.gstatic.com/s/parisienne/v4/1wiHF6pWOa568Cj3p-anxPk_vArhqVIZ0nv9q090hN8.woff2) ;
+ }
+@font-face {
+  font-family: 'Amatic SC';
+  src: url(https://fonts.gstatic.com/s/amaticsc/v8/DPPfSFKxRTXvae2bKDzp5FtXRa8TVwTICgirnJhmVJw.woff2) ;
+ }
+body {
+	border:0;
+	margin:0;
+	padding:0;
+	text-align:center;
+}
+.p1 {
+	font-family: 'Pacifico';
+}
+.cont1{
+	font-family: 'Roboto';
+}
+.p2 {
+	font-family: 'Parisienne';
+}
+.cont2{
+	font-family: 'Open Sans';
+}
+.p3 {
+	font-family: 'Amatic SC';
+}
+.cont3{
+	font-family: 'Montserrat';
+}
+.p1, .p2, .p3 {
+	font-size: 60px;
+	text-shadow: 1px 1px 5px #0000FF;
+}
+
+.divisor1 {
+	background: -moz-linear-gradient(left, blue 10%, black 50%);
+	height: 5px;
+	width:100%;
+}
+
+.divisor2 {
+	background: -moz-linear-gradient(left, black 10%, blue 50%);
+	height: 5px;
+	width:100%;
+}
+
+.divisor3 {
+	background: -moz-linear-gradient(top, blue 30%, black 50%);
+	height: 5px;
+	width:100%;
+}
