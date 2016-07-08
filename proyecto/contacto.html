@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- meta -->
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Template bootstrap</title>
+	<!-- style -->
+	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css'>
+	<link href="css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+	<link href="jquery.bxslider.css" rel="stylesheet" />
+	<link href="css/style.css" rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="container-fluid">
+	<!-- nav -->
+	<div class="row">
+		<nav>
+			<span class="logo">Your company</span>
+			<a href="contacto.html">contacto</a>
+			<a href="acercade.html">acerca de</a>
+			<a href="index.html">inicio</a>
+		</nav>
+	</div>
+	<!-- header -->
+	<div class="row header">
+		<div class="canvas">
+			<div style="display: table-cell; vertical-align: middle;">¡Welcome to your website!</div>
+		</div>
+	</div>
+	<!-- content -->
+	<div class="row">
+		<div class="col-md-3 news-content">
+			<span class="title">Recent articles</span>
+				<div class="new">
+					<div style="padding:5px font-size:15px;font-weight:bold;">Article 1</div>
+					<div style="padding:5px;">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet dolor urna. Etiam at augue ac purus sodales egestas. </span>
+					</div>
+				</div>
+				<div class="new">
+					<div style="padding:5px font-size:15px;font-weight:bold;">Article 2</div>
+					<div style="padding:5px;">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet dolor urna. Etiam at augue ac purus sodales egestas. </span>
+					</div>
+				</div>
+				<div class="new">
+					<div style="padding:5px font-size:15px;font-weight:bold;">Article 3</div>
+					<div style="padding:5px;">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet dolor urna. Etiam at augue ac purus sodales egestas. </span>
+					</div>
+				</div>
+		</div>
+		<div class="col-md-9 text-center"  style="padding:1px;">
+		<h1>Formulario de contacto:</h1>
+			<form id="contact" style="text-align:center;width:60%;margin:0 auto;">
+				<input type="text" id="nombre" name="nombre" placeholder="Nombre" onblur="validateNombre();" required />
+				<input type="text" id="apellido" name="apellido" placeholder="Apellido" onblur="validateApellido();" required />
+				<input type="text" id="empresa" name="empresa" placeholder="Empresa" onblur="validateEmpresa();" required />
+				<input type="text" id="email" name="email" placeholder="Email" onblur="validateEmail();" required />
+				<input type="text" id="pais" name="pais" placeholder="Paìs" onblur="validatePais();" required />
+				<input type="text" id="postal" name="postal" placeholder="Codigo postal" onblur="validatePostal();" required />
+				<input type="submit" value="¡Enviar datos!" required />
+			</form>
+		</div>
+	</div>
+	<footer class="row">
+		<div class="col-md-4 text-center"  style="padding:5px;">
+			<h4><a href="index.html">Inicio</a></h4>
+			<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet dolor urna. Etiam at augue ac purus sodales egestas. </div>
+		</div>
+		<div class="col-md-4 text-center"  style="padding:5px;">
+			<h4><a href="acercade.hmtl">Acerca de</a></h4>
+			<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet dolor urna. Etiam at augue ac purus sodales egestas. </div>
+		</div>
+		<div class="col-md-4 text-center"  style="padding:5px;">
+			<h4><a href="contacto.html">Contacto</a></h4>
+			<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet dolor urna. Etiam at augue ac purus sodales egestas. </div>
+		</div>
+		<div class="col-md-12 text-center"  style="padding-top:20px;padding-bottom:5px; font-size:15px;color:#bdc3c7;">
+		Your company 2016 - all rights reserved
+		</div>
+	</footer>
+</div>
+<!-- script -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="jquery.bxslider.min.js"></script>
+<script>
+function validateNombre() {
+	var nombre = $('#nombre').val();
+    var nombreReg = /^[a-zA-Z]*$/;
+    if( !nombreReg.test(nombre) ) {
+        alert("Nombre invalido");
+	}
+}
+function validateApellido() {
+	var apellido = $('#apellido').val();
+    var apellidoReg = /^[a-zA-Z]*$/;
+    if( !apellidoReg.test(apellido) ) {
+        alert("Apellido invalido");
+	}
+}
+function validateEmpresa() {
+	var empresa = $('#empresa').val();
+    var empresaReg = /^[a-zA-Z]*$/;
+    if( !empresaReg.test(empresa) ) {
+        alert("Nombre de empresa invalido");
+	}
+}
+function validatePais() {
+	var pais = $('#pais').val();
+    var paisReg = /^[a-zA-Z]*$/;
+    if( !paisReg.test(pais) ) {
+        alert("Pais invalido");
+	}
+}
+function validatePostal() {
+	var postal = $('#postal').val();
+    var postalReg = /^[0-9]*$/;
+    if( !postalReg.test(postal) ) {
+        alert("Codigo postal invalido");
+	}
+}
+function validateEmail() {
+	var email = $('#email').val();
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    if( !emailReg.test(email) ) {
+        alert("Email invalido");
+    }
+}
+</script>
+</body>
+</html>
