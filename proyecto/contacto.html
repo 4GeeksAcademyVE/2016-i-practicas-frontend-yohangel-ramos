@@ -55,13 +55,14 @@
 		<div class="col-md-9 text-center"  style="padding:1px;">
 		<h1>Formulario de contacto:</h1>
 			<form id="contact" style="text-align:center;width:60%;margin:0 auto;">
-				<input type="text" id="nombre" name="nombre" placeholder="Nombre" onblur="validateNombre();" required />
-				<input type="text" id="apellido" name="apellido" placeholder="Apellido" onblur="validateApellido();" required />
-				<input type="text" id="empresa" name="empresa" placeholder="Empresa" onblur="validateEmpresa();" required />
-				<input type="text" id="email" name="email" placeholder="Email" onblur="validateEmail();" required />
-				<input type="text" id="pais" name="pais" placeholder="Paìs" onblur="validatePais();" required />
-				<input type="text" id="postal" name="postal" placeholder="Codigo postal" onblur="validatePostal();" required />
-				<input type="submit" value="¡Enviar datos!" required />
+				<div id="errorMsg"></div>
+				<input class="register-textbox" type="text" id="nombre" name="nombre" placeholder="Nombre" onKeyUp="validateNombre();" required />
+				<input class="register-textbox" type="text" id="apellido" name="apellido" placeholder="Apellido" onKeyUp="validateApellido();" required />
+				<input class="register-textbox" type="text" id="empresa" name="empresa" placeholder="Empresa" onKeyUp="validateEmpresa();" required />
+				<input class="register-textbox" type="text" id="email" name="email" placeholder="Email" onKeyUp="validateEmail();" required />
+				<input class="register-textbox" type="text" id="pais" name="pais" placeholder="Paìs" onKeyUp="validatePais();" required />
+				<input class="register-textbox" type="text" id="postal" name="postal" placeholder="Codigo postal" onKeyUp="validatePostal();" required />
+				<input class="register-textbox" type="submit" value="¡Enviar datos!" required />
 			</form>
 		</div>
 	</div>
@@ -87,49 +88,6 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="jquery.bxslider.min.js"></script>
-<script>
-function validateNombre() {
-	var nombre = $('#nombre').val();
-    var nombreReg = /^[a-zA-Z]*$/;
-    if( !nombreReg.test(nombre) ) {
-        alert("Nombre invalido");
-	}
-}
-function validateApellido() {
-	var apellido = $('#apellido').val();
-    var apellidoReg = /^[a-zA-Z]*$/;
-    if( !apellidoReg.test(apellido) ) {
-        alert("Apellido invalido");
-	}
-}
-function validateEmpresa() {
-	var empresa = $('#empresa').val();
-    var empresaReg = /^[a-zA-Z]*$/;
-    if( !empresaReg.test(empresa) ) {
-        alert("Nombre de empresa invalido");
-	}
-}
-function validatePais() {
-	var pais = $('#pais').val();
-    var paisReg = /^[a-zA-Z]*$/;
-    if( !paisReg.test(pais) ) {
-        alert("Pais invalido");
-	}
-}
-function validatePostal() {
-	var postal = $('#postal').val();
-    var postalReg = /^[0-9]*$/;
-    if( !postalReg.test(postal) ) {
-        alert("Codigo postal invalido");
-	}
-}
-function validateEmail() {
-	var email = $('#email').val();
-    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-    if( !emailReg.test(email) ) {
-        alert("Email invalido");
-    }
-}
-</script>
+<script src="js/validate.js"></script>
 </body>
 </html>
