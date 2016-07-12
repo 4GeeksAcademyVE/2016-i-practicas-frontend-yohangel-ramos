@@ -1,4 +1,4 @@
-function validateNombre() {
+$("#nombre").on("propertychange change click keyup input paste", function() {
 	var nombre = $('#nombre').val();
     var nombreReg = /^[a-zA-Z]*$/;
     if(nombre.length < 3 || !nombreReg.test(nombre) ) {
@@ -20,8 +20,8 @@ function validateNombre() {
 		$("#nombre").attr('class', 'sucess');
 		$(".1").remove();
 	}
-}
-function validateApellido() {
+});
+$("#apellido").on("propertychange change click keyup input paste", function() {
 	var apellido = $('#apellido').val();
     var apellidoReg = /^[a-zA-Z]*$/;
     if(apellido.length < 3 || !apellidoReg.test(apellido) ) {
@@ -43,8 +43,8 @@ function validateApellido() {
 		$("#apellido").attr('class', 'sucess');
 		$(".2").remove();
 	}
-}
-function validateEmpresa() {
+});
+$("#empresa").on("propertychange change click keyup input paste", function() {
 	var empresa = $('#empresa').val();
     var empresaReg = /^[a-zA-Z]*$/;
     if(empresa.length < 3 || !empresaReg.test(empresa) ) {
@@ -66,8 +66,8 @@ function validateEmpresa() {
 		$("#empresa").attr('class', 'sucess');
 		$(".3").remove();
 	}
-}
-function validatePais() {
+});
+$("#pais").on("propertychange change click keyup input paste", function() {
 	var pais = $('#pais').val();
     var paisReg = /^[a-zA-Z]*$/;
     if(pais.length < 3 || !paisReg.test(pais) ) {
@@ -89,8 +89,8 @@ function validatePais() {
 		$("#pais").attr('class', 'sucess');
 		$(".4").remove();
 	}
-}
-function validatePostal() {
+});
+$("#postal").on("propertychange change click keyup input paste", function() {
 	var postal = $('#postal').val();
     var postalReg = /^[0-9]*$/;
     if(postal.length < 3 || !postalReg.test(postal) ) {
@@ -112,8 +112,8 @@ function validatePostal() {
 		$("#postal").attr('class', 'sucess');
 		$(".5").remove();
 	}
-}
-function validateEmail() {
+});
+$("#email").on("propertychange change click keyup input paste", function() {
 	var email = $('#email').val();
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
     if(email.length < 3 || !emailReg.test(email) ) {
@@ -135,4 +135,13 @@ function validateEmail() {
 		$("#email").attr('class', 'sucess');
 		$(".6").remove();
     }
-}
+});
+$("#contact").on("submit", function (e) { 
+	var isError = false;
+	if ($("#errorMsg").children().length != 0)
+		isError = true;
+	if(isError) {
+		e.preventDefault();
+		alert("Debe corregir los errores para enviar el formulario.");
+	}
+});

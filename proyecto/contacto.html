@@ -53,14 +53,14 @@
 		</div>
 		<div class="col-md-9 text-center"  style="padding:1px;">
 		<h1>Formulario de contacto:</h1>
-			<form id="contact" style="text-align:center;width:60%;margin:0 auto;">
+			<form id="contact" style="text-align:center;width:60%;margin:0 auto;" method="post">
 				<div id="errorMsg"></div>
-				<input class="register-textbox" type="text" id="nombre" name="nombre" placeholder="Nombre" onKeyUp="validateNombre();" required />
-				<input class="register-textbox" type="text" id="apellido" name="apellido" placeholder="Apellido" onKeyUp="validateApellido();" required />
-				<input class="register-textbox" type="text" id="empresa" name="empresa" placeholder="Empresa" onKeyUp="validateEmpresa();" required />
-				<input class="register-textbox" type="text" id="email" name="email" placeholder="Email" onKeyUp="validateEmail();" required />
-				<input class="register-textbox" type="text" id="pais" name="pais" placeholder="Paìs" onKeyUp="validatePais();" required />
-				<input class="register-textbox" type="text" id="postal" name="postal" placeholder="Codigo postal" onKeyUp="validatePostal();" required />
+				<input class="register-textbox" type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+				<input class="register-textbox" type="text" id="apellido" name="apellido" placeholder="Apellido" required />
+				<input class="register-textbox" type="text" id="empresa" name="empresa" placeholder="Empresa" required />
+				<input class="register-textbox" type="text" id="email" name="email" placeholder="Email" required />
+				<input class="register-textbox" type="text" id="pais" name="pais" placeholder="Paìs" required />
+				<input class="register-textbox" type="text" id="postal" name="postal" placeholder="Codigo postal" required />
 				<input class="register-textbox" type="submit" value="¡Enviar datos!" required />
 			</form>
 		</div>
